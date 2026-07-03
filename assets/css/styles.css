@@ -703,3 +703,28 @@ textarea{
     white-space:nowrap !important;
   }
 }
+/* AJUSTE HERO MOBILE */
+
+@media (max-width:820px){
+
+  /* Reduce el espacio entre el menú y el contenido */
+  .hero{
+    padding-top:8px !important;
+  }
+
+  /* Badge superior */
+  .eyebrow{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    max-width:330px !important;
+    margin:0 auto 18px auto !important;
+    padding:8px 14px !important;
+
+    font-size:11px !important;
+    line-height:1.3 !important;
+    text-align:center !important;
+  }
+
+}
