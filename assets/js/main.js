@@ -47,38 +47,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  function normalizePage(url) {
-    try {
-      const parsed = new URL(url, window.location.origin);
-      let page = parsed.pathname.split("/").pop();
+  const currentPage = (
+    window.location.pathname.split("/").pop() || "index.html"
+  ).toLowerCase();
 
-      if (!page || page === "") page = "index.html";
-      if (page === "index") page = "index.html";
+  document.querySelectorAll(".links a").forEach(link => {
+    link.classList.remove("active");
 
-      return page.toLowerCase();
-    } catch {
-      return "";
+    let href = (link.getAttribute("href") || "").toLowerCase();
+
+    href = href.split("/").pop();
+    href = href.split("?")[0];
+    href = href.split("#")[0];
+
+    if (!href || href === "") href = "index.html";
+
+    if (href === currentPage) {
+      link.classList.add("active");
     }
-  }
-
-const currentPage = (
-  window.location.pathname.split("/").pop() || "index.html"
-).toLowerCase();
-
-document.querySelectorAll(".links a").forEach(link => {
-  link.classList.remove("active");
-
-  let href = (link.getAttribute("href") || "").toLowerCase();
-
-  href = href.split("/").pop();
-  href = href.split("?")[0];
-  href = href.split("#")[0];
-
-  if (href === currentPage) {
-    link.classList.add("active");
-  }
-});
-});
+  });
 
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
