@@ -115,3 +115,31 @@ ul{padding-left:18px;margin:10px 0 0}.tools{columns:4;column-gap:22px}.tools li{
 .btn.brand:hover{
   box-shadow:0 12px 34px rgba(255,179,71,.24);
 }
+/* ---------- TRANSICIÓN ENTRE PÁGINAS ---------- */
+
+body{
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .35s ease, transform .35s ease;
+}
+
+body.page-loaded{
+  opacity:1;
+  transform:translateY(0);
+}
+
+body.page-exit{
+  opacity:0;
+  transform:translateY(-10px);
+}
+
+/* ---------- MENÚ ACTIVO EN TOPBAR ---------- */
+
+.links a.active{
+  color:var(--text);
+  font-weight:800;
+}
+
+.links a.active::after{
+  width:100%;
+}
