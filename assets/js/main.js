@@ -48,24 +48,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const currentPage = (
-    window.location.pathname.split("/").pop() || "index.html"
-  ).toLowerCase();
+  window.location.pathname.split("/").pop() || "index.html"
+).toLowerCase();
 
-  document.querySelectorAll(".links a").forEach(link => {
-    link.classList.remove("active");
+document.querySelectorAll(".links a").forEach(link => {
+  link.classList.remove("active");
 
-    let href = (link.getAttribute("href") || "").toLowerCase();
+  let href = (link.getAttribute("href") || "").toLowerCase();
 
-    href = href.split("/").pop();
-    href = href.split("?")[0];
-    href = href.split("#")[0];
+  href = href.split("/").pop().split("?")[0].split("#")[0];
 
-    if (!href || href === "") href = "index.html";
+  if (!href) href = "index.html";
 
-    if (href === currentPage) {
-      link.classList.add("active");
-    }
-  });
+  if (currentPage === href) {
+    link.classList.add("active");
+  }
+
+  // Compatibilidad si en el futuro cambias nombres
+  if (currentPage === "portfolio.html" && href === "portfolio.html") link.classList.add("active");
+  if (currentPage === "services.html" && href === "services.html") link.classList.add("active");
+  if (currentPage === "cv.html" && href === "cv.html") link.classList.add("active");
+  if (currentPage === "contact.html" && href === "contact.html") link.classList.add("active");
+  if (currentPage === "index.html" && href === "index.html") link.classList.add("active");
+});
+
 
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
