@@ -47,13 +47,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  function normalizePage(url) {
+    try {
+      const parsed = new URL(url, window.location.origin);
+      let page = parsed.pathname.split("/").pop();
+
+      if (!page || page === "") page = "index.html";
+      if (page === "index") page = "index.html";
+
+      return page.toLowerCase();
+    } catch {
+      return "";
+    }
+  }
+
+  const currentPage = normalizePage(window.location.href);
 
   document.querySelectorAll(".links a").forEach(link => {
+    link.classList.remove("active");
+
     const href = link.getAttribute("href");
     if (!href) return;
 
-    const linkPage = href.split("/").pop();
+    const linkPage = normalizePage(href);
 
     if (linkPage === currentPage) {
       link.classList.add("active");
