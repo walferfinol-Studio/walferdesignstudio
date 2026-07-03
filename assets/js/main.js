@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <span>Walfer Design Studio</span>
           </a>
 
-          <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+          <button class="menu-toggle" type="button" aria-label="Abrir menú">☰</button>
 
           <div class="links">
             <a href="index.html">Inicio</a>
