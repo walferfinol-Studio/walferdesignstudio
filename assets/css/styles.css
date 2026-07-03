@@ -589,3 +589,15 @@ textarea{
 .links a.active::after{
   width:100% !important;
 }
+/* LINEA FIJA EN SECCIÓN ACTIVA */
+
+.links a.active{
+  color:#fff !important;
+  font-weight:700 !important;
+}
+
+.links a.active::after{
+  display:block !important;
+  width:100% !important;
+  opacity:1 !important;
+}
