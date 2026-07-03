@@ -51,6 +51,7 @@ ul{padding-left:18px;margin:10px 0 0}.tools{columns:4;column-gap:22px}.tools li{
 .logo-img{
   width:42px;
   height:42px;
+  border-radius:5px;
   object-fit:contain;
   display:block;
   transition:transform .25s ease, filter .25s ease;
