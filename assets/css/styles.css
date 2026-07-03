@@ -601,3 +601,63 @@ textarea{
   width:100% !important;
   opacity:1 !important;
 }
+/* FIX TOPBAR MOBILE - NO ALTERA DESKTOP */
+
+@media (max-width:820px){
+
+  .nav .inner{
+    height:88px;
+    display:grid;
+    grid-template-columns:54px 1fr 130px;
+    grid-template-rows:48px 30px;
+    align-items:center;
+    padding-top:6px;
+  }
+
+  .menu-toggle{
+    grid-column:1;
+    grid-row:1;
+    justify-self:start;
+    width:42px;
+    height:42px;
+    margin:0;
+  }
+
+  .nav-cta{
+    grid-column:3;
+    grid-row:1;
+    justify-self:end;
+    width:auto;
+    min-width:118px;
+    height:42px;
+    padding:0 22px;
+  }
+
+  .logo{
+    grid-column:1 / 4;
+    grid-row:2;
+    justify-self:center;
+    align-self:start;
+    transform:scale(.58);
+    transform-origin:top center;
+    margin-top:-4px;
+  }
+
+  .logo:hover{
+    transform:scale(.58);
+  }
+
+  .logo-img{
+    width:34px;
+    height:34px;
+  }
+
+  .logo span{
+    font-size:13px;
+    line-height:1;
+  }
+
+  .links{
+    top:88px;
+  }
+}
