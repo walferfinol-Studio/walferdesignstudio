@@ -581,3 +581,11 @@ textarea{
     display:block;
   }
 }
+.links a.active{
+  color:#fff !important;
+  font-weight:700 !important;
+}
+
+.links a.active::after{
+  width:100% !important;
+}
