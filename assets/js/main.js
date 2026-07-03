@@ -2,6 +2,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("site-header");
   const footer = document.getElementById("site-footer");
 
+  function getCurrentPage() {
+    let page = window.location.pathname.split("/").pop();
+    if (!page || page === "/") page = "index.html";
+    return page;
+  }
+
+  function setActiveMenu() {
+    const currentPage = getCurrentPage();
+
+    document.querySelectorAll(".links a").forEach(link => {
+      const linkPage = link.getAttribute("href");
+
+      link.classList.remove("active");
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  }
+
   function enableMobileMenu() {
     const toggle = document.querySelector(".menu-toggle");
     const links = document.querySelector("#nav-links");
@@ -11,18 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => {
       links.classList.toggle("open");
       toggle.textContent = links.classList.contains("open") ? "×" : "☰";
-    });
-  }
-
-  function setActiveMenu() {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-    document.querySelectorAll(".links a").forEach(link => {
-      const linkPage = link.getAttribute("href");
-
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      }
     });
   }
 
@@ -38,13 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
         href.startsWith("mailto:") ||
         href.startsWith("http") ||
         link.target === "_blank"
-      ) {
-        return;
-      }
+      ) return;
 
       link.addEventListener("click", e => {
         e.preventDefault();
-
         document.body.classList.remove("page-loaded");
         document.body.classList.add("page-exit");
 
@@ -57,29 +62,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (header) {
     fetch("/header.html")
-      .then(response => response.text())
-      .then(data => {
-        header.innerHTML = data;
+      .then(res => res.text())
+      .then(html => {
+        header.innerHTML = html;
         setActiveMenu();
         enableMobileMenu();
         enablePageTransitions();
       });
-  } else {
-    setActiveMenu();
-    enableMobileMenu();
-    enablePageTransitions();
   }
 
   if (footer) {
     fetch("/footer.html")
-      .then(response => response.text())
-      .then(data => {
-        footer.innerHTML = data;
+      .then(res => res.text())
+      .then(html => {
+        footer.innerHTML = html;
 
         const year = document.getElementById("year");
-        if (year) {
-          year.textContent = new Date().getFullYear();
-        }
+        if (year) year.textContent = new Date().getFullYear();
       });
   }
 });
