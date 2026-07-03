@@ -61,34 +61,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-const path = window.location.pathname.toLowerCase();
+const currentPage = (
+  window.location.pathname.split("/").pop() || "index.html"
+).toLowerCase();
 
 document.querySelectorAll(".links a").forEach(link => {
   link.classList.remove("active");
 
-  const href = (link.getAttribute("href") || "").toLowerCase();
+  let href = (link.getAttribute("href") || "").toLowerCase();
 
-  if (
-    (path.endsWith("/") || path.includes("index")) && href.includes("index")
-  ) {
+  href = href.split("/").pop();
+  href = href.split("?")[0];
+  href = href.split("#")[0];
+
+  if (href === currentPage) {
     link.classList.add("active");
   }
-
-  if (path.includes("portafolio") && href.includes("portafolio")) {
-    link.classList.add("active");
-  }
-
-  if (path.includes("servicios") && href.includes("servicios")) {
-    link.classList.add("active");
-  }
-
-  if (path.includes("cv") && href.includes("cv")) {
-    link.classList.add("active");
-  }
-
-  if (path.includes("contacto") && href.includes("contacto")) {
-    link.classList.add("active");
-  }
+});
 });
 
   document.querySelectorAll("a").forEach(link => {
