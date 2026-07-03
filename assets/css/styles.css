@@ -491,3 +491,54 @@ textarea{
     display:block;
   }
 }
+/* FIX URGENTE DESKTOP */
+
+body{
+  opacity:1 !important;
+  transform:none !important;
+  display:block !important;
+  visibility:visible !important;
+}
+
+@media (min-width:821px){
+
+  .nav .inner{
+    height:72px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+  }
+
+  .links{
+    display:flex !important;
+    position:static !important;
+    gap:20px !important;
+  }
+
+  .menu-toggle{
+    display:none !important;
+  }
+
+  .nav-cta{
+    display:inline-flex !important;
+  }
+
+  .hero{
+    display:block !important;
+    padding:92px 0 54px !important;
+  }
+
+  .stats{
+    display:grid !important;
+    grid-template-columns:repeat(4,1fr) !important;
+  }
+
+  .grid{
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+  }
+
+  .grid.two{
+    grid-template-columns:repeat(2,1fr) !important;
+  }
+}
