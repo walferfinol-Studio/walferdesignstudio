@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       link.addEventListener("click", e => {
         e.preventDefault();
+
         document.body.classList.remove("page-loaded");
         document.body.classList.add("page-exit");
 
