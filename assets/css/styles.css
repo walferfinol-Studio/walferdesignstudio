@@ -43,18 +43,19 @@ ul{padding-left:18px;margin:10px 0 0}.tools{columns:4;column-gap:22px}.tools li{
   transition:opacity .25s ease, transform .25s ease;
 }
 
-.logo:hover{
-  opacity:.9;
-  transform:translateY(-1px);
-}
-
 .logo-img{
   width:42px;
   height:42px;
-  border-radius:5px;
   object-fit:contain;
-  display:block;
-  transition:transform .25s ease, filter .25s ease;
+  border-radius:5px;
+  border:1px solid transparent;
+  transition:all .25s ease;
+}
+
+.logo:hover .logo-img{
+  transform:rotate(-6deg) scale(1.06);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:0 8px 20px rgba(255,179,71,.18);
 }
 
 .logo:hover .logo-img{
