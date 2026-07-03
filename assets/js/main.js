@@ -2,6 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("site-header");
   const footer = document.getElementById("site-footer");
 
+  function enableMobileMenu() {
+    const toggle = document.querySelector(".menu-toggle");
+    const links = document.querySelector("#nav-links");
+
+    if (!toggle || !links) return;
+
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("open");
+      toggle.textContent = links.classList.contains("open") ? "×" : "☰";
+    });
+  }
+
   function setActiveMenu() {
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
@@ -49,10 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         header.innerHTML = data;
         setActiveMenu();
+        enableMobileMenu();
         enablePageTransitions();
       });
   } else {
     setActiveMenu();
+    enableMobileMenu();
     enablePageTransitions();
   }
 
