@@ -1,3 +1,154 @@
+# ==========================================
+# Walfer Design Studio
+# https://www.walferdesignstudio.com
+# Acceso abierto para buscadores, crawlers,
+# asistentes de IA e indexadores públicos.
+# ==========================================
+
 User-agent: *
 Allow: /
-Sitemap: https://walferdesignstudio.com/sitemap.xml
+
+# Google Search
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Google IA / Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+User-agent: AdIdxBot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Brave Search
+User-agent: Bravebot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# Huawei / Petal Search
+User-agent: PetalBot
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Internet Archive
+User-agent: ia_archiver
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Meta / Facebook / Instagram
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest
+User-agent: Pinterestbot
+Allow: /
+
+# X / Twitter
+User-agent: Twitterbot
+Allow: /
+
+# TikTok / ByteDance
+User-agent: Bytespider
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Ahrefs
+User-agent: AhrefsBot
+Allow: /
+
+# Semrush
+User-agent: SemrushBot
+Allow: /
+
+# Majestic
+User-agent: MJ12bot
+Allow: /
+
+# SEO / Auditoría
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: SiteAuditBot
+Allow: /
+
+# Sitemap oficial
+Sitemap: https://www.walferdesignstudio.com/sitemap.xml
