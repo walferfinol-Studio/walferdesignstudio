@@ -728,3 +728,21 @@ textarea{
   }
 
 }
+.behance-btn{
+    display:inline-flex;
+    align-items:center;
+    margin-top:28px;
+    padding:14px 24px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:999px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.behance-btn:hover{
+    border-color:#1769FF;
+    background:#1769FF;
+    transform:translateY(-2px);
+}
