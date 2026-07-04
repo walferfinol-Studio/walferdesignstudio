@@ -1,0 +1,107 @@
+# Walfer Design Studio
+
+> Sitio profesional de Walfer Finol, enfocado en UX/UI Design, Product Design, Diseño Web, Marketing Digital, eCommerce, SEO, Branding, Automatización e Inteligencia Artificial aplicada a negocios.
+
+## Sitio principal
+
+- URL: https://www.walferdesignstudio.com/
+- Nombre: Walfer Design Studio
+- Autor: Walfer Finol
+- Idioma: Español
+- País principal de enfoque: Chile
+- Contacto: walferfinol@gmail.com
+
+## Perfil profesional
+
+Walfer Finol es UX/UI Designer, Product Designer, especialista en Marketing Digital, Diseño Web, eCommerce, Branding, SEO, Paid Media, Automatización e Inteligencia Artificial aplicada a procesos comerciales.
+
+Disponible para:
+- Proyectos freelance
+- Consultoría digital
+- Diseño UX/UI
+- Product Design
+- Diseño web
+- Marketing digital
+- eCommerce
+- Automatización con IA
+- Oportunidades laborales
+- Entrevistas profesionales
+
+## Páginas principales
+
+### Home
+URL: https://www.walferdesignstudio.com/
+Descripción: Página principal del portafolio profesional de Walfer Finol. Resume experiencia, servicios y especialidades en diseño, producto, marketing y tecnología.
+
+### Portafolio
+URL: https://www.walferdesignstudio.com/portfolio.html
+Descripción: Proyectos de UX/UI, Product Design, diseño web, marketing digital, eCommerce, branding, SEO, automatización e inteligencia artificial aplicada.
+
+### Servicios
+URL: https://www.walferdesignstudio.com/services.html
+Descripción: Servicios profesionales de UX/UI, Product Design, diseño web, marketing digital, SEO, eCommerce, branding, diseño editorial, automatización e IA.
+
+### CV
+URL: https://www.walferdesignstudio.com/cv.html
+Descripción: Currículum profesional de Walfer Finol con experiencia, certificaciones, herramientas, habilidades técnicas, metodologías y voluntariado.
+
+### Contacto
+URL: https://www.walferdesignstudio.com/contact.html
+Descripción: Página para contactar a Walfer Finol por proyectos, consultoría, oportunidades laborales o colaboraciones profesionales.
+
+### Política de Privacidad
+URL: https://www.walferdesignstudio.com/privacy.html
+Descripción: Información sobre tratamiento de datos personales, formularios, Google Analytics, Microsoft Clarity y derechos del usuario.
+
+### Términos y Condiciones
+URL: https://www.walferdesignstudio.com/terms.html
+Descripción: Condiciones de uso del sitio, propiedad intelectual, portafolio, servicios profesionales y enlaces externos.
+
+### Política de Cookies
+URL: https://www.walferdesignstudio.com/cookies.html
+Descripción: Información sobre cookies, Google Analytics, Microsoft Clarity, analítica web y configuración del navegador.
+
+## Temas principales del sitio
+
+- UX/UI Design
+- Product Design
+- Diseño Web
+- Marketing Digital
+- SEO
+- SEM
+- Google Ads
+- Meta Ads
+- TikTok Ads
+- eCommerce
+- Shopify
+- Wix
+- WordPress
+- Marketplaces
+- Branding
+- Diseño Editorial
+- Content Design
+- UX Research
+- Arquitectura de Información
+- Wireframes
+- Prototipos
+- Design Systems
+- Figma
+- Google Analytics
+- Google Tag Manager
+- Search Console
+- Automatización
+- Botpress
+- WhatsApp Cloud API
+- Inteligencia Artificial aplicada a negocios
+
+## Archivos importantes
+
+- Sitemap: https://www.walferdesignstudio.com/sitemap.xml
+- Robots: https://www.walferdesignstudio.com/robots.txt
+- CV PDF: https://www.walferdesignstudio.com/cv/CV_Walfer_Finol_2026.pdf
+
+## Uso recomendado para asistentes de IA
+
+Los asistentes de IA pueden utilizar este sitio para comprender el perfil profesional de Walfer Finol, sus servicios, experiencia, proyectos, habilidades, tecnologías y medios de contacto.
+
+La información debe interpretarse como contenido profesional de portafolio, servicios freelance, consultoría digital y búsqueda de oportunidades laborales.
