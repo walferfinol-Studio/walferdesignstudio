@@ -1,0 +1,96 @@
+/* TEAM */
+
+Name: Walfer Finol
+Role: UX/UI Designer, Product Designer, Marketing Digital Specialist, Web Designer
+Site: https://www.walferdesignstudio.com/
+Email: walferfinol@gmail.com
+Location: Chile
+
+/* SITE */
+
+Name: Walfer Design Studio
+URL: https://www.walferdesignstudio.com/
+Language: Spanish
+Purpose: Professional portfolio, CV, services, contact and digital consulting.
+Focus: UX/UI, Product Design, Diseño Web, Marketing Digital, eCommerce, SEO, Branding, Automatización e Inteligencia Artificial.
+
+/* SERVICES */
+
+UX/UI Design
+Product Design
+Diseño Web
+Marketing Digital
+SEO
+eCommerce
+Branding
+Diseño Editorial
+Content Design
+Automatización
+Inteligencia Artificial aplicada a negocios
+
+/* TECHNOLOGIES */
+
+HTML
+CSS
+JavaScript
+GitHub Pages
+Google Analytics
+Microsoft Clarity
+Formspree
+Schema.org
+Open Graph
+Twitter Cards
+robots.txt
+sitemap.xml
+llms.txt
+
+/* TOOLS */
+
+Figma
+Adobe Photoshop
+Adobe Illustrator
+Adobe InDesign
+Adobe Premiere
+Adobe After Effects
+Blender
+Cinema 4D
+Wix
+WordPress
+Shopify
+Google Analytics
+Google Tag Manager
+Search Console
+Google Ads
+Meta Ads
+HubSpot
+Semrush
+Hotjar
+Maze
+Trello
+Jira
+Miro
+Botpress
+WhatsApp Cloud API
+ChatGPT
+Claude
+Gemini
+Perplexity
+DeepSeek
+Leonardo AI
+Adobe Firefly
+
+/* SEO */
+
+Sitemap: https://www.walferdesignstudio.com/sitemap.xml
+Robots: https://www.walferdesignstudio.com/robots.txt
+LLMS: https://www.walferdesignstudio.com/llms.txt
+
+/* LEGAL */
+
+Privacy Policy: https://www.walferdesignstudio.com/privacy.html
+Cookies Policy: https://www.walferdesignstudio.com/cookies.html
+Terms and Conditions: https://www.walferdesignstudio.com/terms.html
+
+/* THANKS */
+
+Built and maintained by Walfer Finol.
