@@ -36,23 +36,23 @@ document.addEventListener("DOMContentLoaded", async () => {
      CARGA DEL HEADER
   ========================================== */
 
-  await loadHTML(header, [
-    "header.html",
-    "./header.html",
-    "components/header.html",
-    "./components/header.html"
-  ]);
+await loadHTML(header, [
+  "header.html?v=1.0.1",
+  "./header.html?v=1.0.1",
+  "components/header.html?v=1.0.1",
+  "./components/header.html?v=1.0.1"
+]);
 
   /* ==========================================
      CARGA DEL FOOTER
   ========================================== */
 
-  await loadHTML(footer, [
-    "footer.html",
-    "./footer.html",
-    "components/footer.html",
-    "./components/footer.html"
-  ]);
+await loadHTML(footer, [
+  "footer.html?v=1.0.1",
+  "./footer.html?v=1.0.1",
+  "components/footer.html?v=1.0.1",
+  "./components/footer.html?v=1.0.1"
+]);
 
   /* ==========================================
      ANIMACIÓN DE ENTRADA DE PÁGINA
