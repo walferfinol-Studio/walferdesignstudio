@@ -1,0 +1,18 @@
+# ==========================================
+# Walfer Design Studio
+# Security Contact Information
+# ==========================================
+
+Contact: mailto:walferdesignstudio@gmail.com
+
+Expires: 2030-07-01T00:00:00Z
+
+Preferred-Languages: es,en
+
+Canonical: https://www.walferdesignstudio.com/security.txt
+
+Policy: https://www.walferdesignstudio.com/privacy.html
+
+Hiring: https://www.walferdesignstudio.com/contact.html
+
+Acknowledgments: https://www.walferdesignstudio.com/
