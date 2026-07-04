@@ -1,6 +1,22 @@
+/* ==========================================
+   MAIN JS - WALFER DESIGN STUDIO
+   Carga header/footer, menú mobile,
+   enlaces activos y transiciones de página.
+========================================== */
+
 document.addEventListener("DOMContentLoaded", async () => {
+
+  /* ==========================================
+     ELEMENTOS DINÁMICOS: HEADER Y FOOTER
+  ========================================== */
+
   const header = document.getElementById("site-header");
   const footer = document.getElementById("site-footer");
+
+  /* ==========================================
+     FUNCIÓN: CARGAR HTML EXTERNO
+     Carga header.html y footer.html.
+  ========================================== */
 
   async function loadHTML(element, paths) {
     if (!element || element.innerHTML.trim()) return;
@@ -16,12 +32,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  /* ==========================================
+     CARGA DEL HEADER
+  ========================================== */
+
   await loadHTML(header, [
     "header.html",
     "./header.html",
     "components/header.html",
     "./components/header.html"
   ]);
+
+  /* ==========================================
+     CARGA DEL FOOTER
+  ========================================== */
 
   await loadHTML(footer, [
     "footer.html",
@@ -30,7 +54,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     "./components/footer.html"
   ]);
 
+  /* ==========================================
+     ANIMACIÓN DE ENTRADA DE PÁGINA
+     Activa la clase que muestra el body.
+  ========================================== */
+
+  document.body.classList.remove("page-exit");
   document.body.classList.add("page-loaded");
+
+  /* ==========================================
+     MENÚ MOBILE
+     Abre/cierra el menú hamburguesa.
+  ========================================== */
 
   const menuToggle = document.querySelector(".menu-toggle");
   const links = document.querySelector(".links");
@@ -40,6 +75,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       links.classList.toggle("open");
     });
 
+    /* ==========================================
+       CERRAR MENÚ MOBILE AL HACER CLICK
+       EN UN ENLACE DEL MENÚ.
+    ========================================== */
+
     links.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         links.classList.remove("open");
@@ -47,22 +87,32 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-const currentPath = window.location.pathname.toLowerCase();
+  /* ==========================================
+     ENLACE ACTIVO EN EL MENÚ
+     Marca como activo el link de la página actual.
+  ========================================== */
 
-document.querySelectorAll(".links a").forEach(link => {
-  const href = (link.getAttribute("href") || "").toLowerCase();
-  const text = (link.textContent || "").toLowerCase();
+  const currentPath = window.location.pathname.toLowerCase();
 
-  link.classList.remove("active");
+  document.querySelectorAll(".links a").forEach(link => {
+    const href = (link.getAttribute("href") || "").toLowerCase();
+    const text = (link.textContent || "").toLowerCase();
 
-  if (
-    currentPath.includes(href.replace(".html","")) ||
-    currentPath.includes(text) ||
-    (currentPath.endsWith("/") && href.includes("index"))
-  ) {
-    link.classList.add("active");
-  }
-});
+    link.classList.remove("active");
+
+    if (
+      currentPath.includes(href.replace(".html","")) ||
+      currentPath.includes(text) ||
+      (currentPath.endsWith("/") && href.includes("index"))
+    ) {
+      link.classList.add("active");
+    }
+  });
+
+  /* ==========================================
+     TRANSICIÓN ENTRE PÁGINAS
+     Agrega page-exit antes de navegar.
+  ========================================== */
 
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
@@ -80,6 +130,8 @@ document.querySelectorAll(".links a").forEach(link => {
 
       if (url.hostname === window.location.hostname) {
         e.preventDefault();
+
+        document.body.classList.remove("page-loaded");
         document.body.classList.add("page-exit");
 
         setTimeout(() => {
@@ -88,4 +140,28 @@ document.querySelectorAll(".links a").forEach(link => {
       }
     });
   });
+
+});
+
+/* ==========================================
+   FIX MOBILE / BACK BUTTON
+   Evita pantalla en blanco al volver atrás.
+   Especialmente útil en Safari iOS, Chrome Android
+   y navegadores que usan Back Forward Cache.
+========================================== */
+
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("page-exit");
+  document.body.classList.add("page-loaded");
+});
+
+/* ==========================================
+   FIX EXTRA: RESTAURAR VISIBILIDAD
+   Si el navegador restaura la página desde caché,
+   fuerza que el body vuelva a estar visible.
+========================================== */
+
+window.addEventListener("popstate", () => {
+  document.body.classList.remove("page-exit");
+  document.body.classList.add("page-loaded");
 });
