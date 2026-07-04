@@ -1,8 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://walferdesignstudio.com/</loc></url>
-<url><loc>https://walferdesignstudio.com/portfolio.html</loc></url>
-<url><loc>https://walferdesignstudio.com/services.html</loc></url>
-<url><loc>https://walferdesignstudio.com/cv.html</loc></url>
-<url><loc>https://walferdesignstudio.com/contact.html</loc></url>
+
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- PORTAFOLIO -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/portfolio.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- SERVICIOS -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/services.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- CV -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/cv.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- CONTACTO -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/contact.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- POLÍTICA DE PRIVACIDAD -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/privacy.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <!-- TÉRMINOS Y CONDICIONES -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/terms.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <!-- POLÍTICA DE COOKIES -->
+  <url>
+    <loc>https://www.walferdesignstudio.com/cookies.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
 </urlset>
