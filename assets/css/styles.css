@@ -787,3 +787,25 @@ textarea{
 .footer-links span{
   color:var(--muted);
 }
+
+/* ==========================
+   INDICADOR DE DISPONIBILIDAD
+   ========================== */
+
+.eyebrow{
+  border:none !important;
+  background:none !important;
+  padding:0 !important;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+.status-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#22c55e;
+  flex-shrink:0;
+  box-shadow:0 0 0 4px rgba(34,197,94,.18);
+}
