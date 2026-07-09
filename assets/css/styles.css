@@ -875,32 +875,67 @@ textarea{
    Imagen principal del Home
 ========================================================== */
 
+.hero{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
 .hero-grid{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:45% 55%;
     align-items:center;
-    gap:70px;
+    gap:30px;
+
 }
 
 .hero-content{
-    width:100%;
+
+    position:relative;
+    z-index:2;
+
 }
 
-.hero-image{
+.hero-image-bg{
+
     display:flex;
-    justify-content:center;
+    justify-content:flex-end;
     align-items:center;
+
 }
 
-.hero-image img{
-    width:100%;
-    max-width:720px;
+.hero-image-bg img{
+
+    width:135%;
+    max-width:1000px;
     height:auto;
-    display:block;
 
-    filter:drop-shadow(0 30px 80px rgba(0,0,0,.35));
+    margin-right:-180px;
 
-    animation:heroFloat 7s ease-in-out infinite;
+    filter:
+    drop-shadow(0 45px 90px rgba(0,0,0,.55))
+    drop-shadow(0 0 40px rgba(0,183,255,.18));
+
+    animation:heroFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
 }
 
 @keyframes heroFloat{
@@ -928,19 +963,21 @@ textarea{
 .hero-grid{
 
     grid-template-columns:1fr;
-    gap:40px;
 
 }
 
-.hero-image{
+.hero-image-bg{
 
-    order:-1;
+    order:2;
+    justify-content:center;
 
 }
 
-.hero-image img{
+.hero-image-bg img{
 
-    max-width:550px;
+    width:100%;
+    max-width:700px;
+    margin-right:0;
 
 }
 
