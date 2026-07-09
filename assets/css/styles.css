@@ -1140,6 +1140,8 @@ backdrop-filter:blur(5px) !important;
 -webkit-backdrop-filter:blur(5px) !important;
 
 box-shadow:none !important;
+  }
+
 }
 
 /* Mobile: sin cristal porque esa imagen no debe verse */
@@ -1170,48 +1172,38 @@ box-shadow:none !important;
         0 1px 4px rgba(0,0,0,.35);
 
 }
-/* ===================================
-   FIX DEFINITIVO ICONOS ESPECIALIDADES
-   Mismo tamaño en desktop, tablet y mobile
-=================================== */
 
-.card .card-icon{
-  width:30px !important;
-  height:30px !important;
-  max-width:30px !important;
-  max-height:30px !important;
-  margin-bottom:16px !important;
-}
-
-.card .card-icon img{
-  width:30px !important;
-  height:30px !important;
-  max-width:30px !important;
-  max-height:30px !important;
-  display:block !important;
-  object-fit:contain !important;
-}
 /* ===================================
-   SOLO AJUSTE ICONOS ESPECIALIDADES
-   No altera el resto del sitio
+   ICONOS ESPECIALIDADES
+   Tamaño fijo en desktop, tablet y mobile
 =================================== */
 
 section .grid .card > .card-icon{
   width:30px !important;
   height:30px !important;
+  min-width:30px !important;
+  min-height:30px !important;
   max-width:30px !important;
   max-height:30px !important;
-  margin-bottom:16px !important;
+
   display:flex !important;
   align-items:center !important;
   justify-content:center !important;
+
+  margin-bottom:16px !important;
+  flex:0 0 30px !important;
+  overflow:visible !important;
 }
 
 section .grid .card > .card-icon > img{
   width:30px !important;
   height:30px !important;
+  min-width:30px !important;
+  min-height:30px !important;
   max-width:30px !important;
   max-height:30px !important;
+
   display:block !important;
   object-fit:contain !important;
+  flex:0 0 30px !important;
 }
