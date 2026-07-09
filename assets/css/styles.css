@@ -1170,3 +1170,24 @@ box-shadow:none !important;
         0 1px 4px rgba(0,0,0,.35);
 
 }
+/* ===================================
+   ICONO DE ESPECIALIDADES
+=================================== */
+
+.card-icon{
+    width:64px;
+    height:64px;
+
+    margin-bottom:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.card-icon img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
