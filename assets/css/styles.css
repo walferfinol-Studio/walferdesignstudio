@@ -1171,28 +1171,23 @@ box-shadow:none !important;
 
 }
 /* ===================================
-   ICONOS DE ESPECIALIDADES
+   FIX DEFINITIVO ICONOS ESPECIALIDADES
+   Mismo tamaño en desktop, tablet y mobile
 =================================== */
 
 .card .card-icon{
-    width:20px;
-    height:20px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:10px;
-    flex-shrink:0;
+  width:42px !important;
+  height:42px !important;
+  max-width:42px !important;
+  max-height:42px !important;
+  margin-bottom:16px !important;
 }
 
 .card .card-icon img{
-    width:20px;
-    height:20px;
-
-    max-width:20px;
-    max-height:20px;
-
-    display:block;
-    object-fit:contain;
+  width:42px !important;
+  height:42px !important;
+  max-width:42px !important;
+  max-height:42px !important;
+  display:block !important;
+  object-fit:contain !important;
 }
