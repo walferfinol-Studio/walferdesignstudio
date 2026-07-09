@@ -883,7 +883,7 @@ textarea{
 
 .hero-grid{
   display:grid;
-  grid-template-columns:70% 30%;
+  grid-template-columns:minmax(0, 60%) minmax(320px, 40%);
   align-items:end;
   gap:20px;
 }
@@ -922,9 +922,11 @@ textarea{
 .hero-image-bg img{
   width:100%;
   max-width:900px;
+  min-width:320px;
   height:auto;
   display:block;
   margin:0;
+  object-fit:contain;
 
   background:transparent;
   box-shadow:none !important;
@@ -932,9 +934,35 @@ textarea{
   animation:none !important;
 }
 
-/* Oculta las tarjetas del hero para que cierre en comerciales */
+/* Oculta las tarjetas del hero para que cierre mejor */
 .hero .stats{
   display:none;
+}
+
+/* ==========================
+   DESKTOP MEDIO
+========================== */
+
+@media(max-width:1180px){
+
+  .hero-grid{
+    grid-template-columns:minmax(0, 56%) minmax(300px, 44%);
+    gap:18px;
+  }
+
+  .hero h1{
+    max-width:540px;
+  }
+
+  .hero .lead{
+    max-width:520px;
+  }
+
+  .hero-image img,
+  .hero-image-bg img{
+    max-width:760px;
+  }
+
 }
 
 /* ==========================
@@ -968,7 +996,9 @@ textarea{
 
   .hero-image img,
   .hero-image-bg img{
+    width:100%;
     max-width:720px;
+    min-width:0;
   }
 
 }
@@ -987,10 +1017,21 @@ textarea{
     gap:24px;
   }
 
+  .hero h1{
+    font-size:42px;
+    max-width:100%;
+  }
+
+  .hero .lead{
+    font-size:16px;
+    max-width:100%;
+  }
+
   .hero-image img,
   .hero-image-bg img{
-    width:115%;
+    width:108%;
     max-width:none;
+    min-width:0;
   }
 
 }
