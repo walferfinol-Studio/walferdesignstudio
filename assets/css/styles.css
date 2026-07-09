@@ -1191,3 +1191,27 @@ box-shadow:none !important;
   display:block !important;
   object-fit:contain !important;
 }
+/* ===================================
+   SOLO AJUSTE ICONOS ESPECIALIDADES
+   No altera el resto del sitio
+=================================== */
+
+section .grid .card > .card-icon{
+  width:30px !important;
+  height:30px !important;
+  max-width:30px !important;
+  max-height:30px !important;
+  margin-bottom:16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+section .grid .card > .card-icon > img{
+  width:30px !important;
+  height:30px !important;
+  max-width:30px !important;
+  max-height:30px !important;
+  display:block !important;
+  object-fit:contain !important;
+}
