@@ -1081,3 +1081,14 @@ textarea{
     grid-template-columns:1fr;
   }
 }
+/* ==========================================================
+   OCULTAR IMAGEN HERO EN MOBILE
+========================================================== */
+
+@media(max-width:640px){
+
+  .hero-image{
+    display:none !important;
+  }
+
+}
