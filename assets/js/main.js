@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   ========================================== */
 
 await loadHTML(header, [
-  "header.html?v=1.0.1",
-  "./header.html?v=1.0.1",
-  "components/header.html?v=1.0.1",
-  "./components/header.html?v=1.0.1"
+  "header.html?v=1.0.2",
+  "./header.html?v=1.0.2",
+  "components/header.html?v=1.0.2",
+  "./components/header.html?v=1.0.2"
 ]);
 
   /* ==========================================
@@ -48,10 +48,10 @@ await loadHTML(header, [
   ========================================== */
 
 await loadHTML(footer, [
-  "footer.html?v=1.0.1",
-  "./footer.html?v=1.0.1",
-  "components/footer.html?v=1.0.1",
-  "./components/footer.html?v=1.0.1"
+  "footer.html?v=1.0.2",
+  "./footer.html?v=1.0.2",
+  "components/footer.html?v=1.0.2",
+  "./components/footer.html?v=1.0.2"
 ]);
 
   /* ==========================================
