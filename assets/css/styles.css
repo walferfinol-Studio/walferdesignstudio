@@ -871,8 +871,7 @@ textarea{
   }
 }
 /* ==========================================================
-   HERO HOME - IMAGEN DE FONDO SIN OSCURECER
-   La imagen se escala automáticamente según pantalla
+   HERO HOME - IMAGEN COMO FONDO REAL
 ========================================================== */
 
 .hero{
@@ -884,9 +883,11 @@ textarea{
   overflow:hidden;
 }
 
+/* Contenido del hero */
 .hero-layout,
 .hero .wrap{
   position:relative;
+  z-index:3;
   width:100%;
   max-width:none;
   min-height:calc(100vh - 72px);
@@ -894,7 +895,7 @@ textarea{
   padding:clamp(36px, 5vw, 72px) clamp(20px, 4vw, 64px);
 }
 
-/* Texto encima */
+/* Texto */
 .hero-content{
   position:relative;
   z-index:5;
@@ -924,34 +925,32 @@ textarea{
   margin-bottom:44px;
 }
 
-/* Imagen como fondo, visible completa y sin oscurecer */
+/* IMAGEN COMO FONDO REAL */
 .hero-image{
   position:absolute;
   inset:0;
   z-index:1;
+  width:100%;
+  height:100%;
   overflow:hidden;
   pointer-events:none;
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-start;
 }
 
 .hero-image img{
-  width:clamp(760px, 70vw, 1550px);
-  height:auto;
-  max-width:none;
-
-  margin-top:clamp(10px, 3vw, 60px);
-  margin-right:clamp(-260px, -10vw, -40px);
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
 
   display:block;
+
   opacity:1 !important;
   filter:none !important;
   box-shadow:none !important;
   animation:none !important;
 }
 
-/* Quita cualquier capa oscura anterior */
+/* Elimina cualquier capa oscura */
 .hero::after{
   content:none !important;
 }
@@ -1021,15 +1020,11 @@ textarea{
   color:var(--muted);
 }
 
-/* Oculta stats antiguas */
 .hero .stats{
   display:none;
 }
 
-/* ==========================
-   TABLET
-========================== */
-
+/* TABLET */
 @media(max-width:980px){
 
   .hero{
@@ -1043,13 +1038,11 @@ textarea{
   }
 
   .hero h1{
-    font-size:clamp(38px, 8vw, 58px);
+    font-size:clamp(36px, 7vw, 58px);
   }
 
   .hero-image img{
-    width:clamp(620px, 82vw, 900px);
-    margin-top:20px;
-    margin-right:clamp(-220px, -18vw, -80px);
+    object-position:center top;
   }
 
   .hero-stats{
@@ -1064,11 +1057,7 @@ textarea{
   }
 }
 
-/* ==========================
-   MOBILE
-   Aquí luego cambiamos por otra imagen si quieres
-========================== */
-
+/* MOBILE */
 @media(max-width:640px){
 
   .hero-layout,
@@ -1077,7 +1066,7 @@ textarea{
   }
 
   .hero h1{
-    font-size:40px;
+    font-size:38px;
   }
 
   .hero .lead{
