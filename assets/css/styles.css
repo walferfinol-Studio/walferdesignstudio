@@ -1095,3 +1095,62 @@ textarea{
   }
 
 }
+
+/* ==========================================================
+   FIX HERO FULL WIDTH SIN MÁRGENES
+   Pegado al topbar y de punta a punta
+========================================================== */
+
+.hero{
+  width:100vw !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  min-height:calc(100vh - 72px);
+  overflow:hidden;
+}
+
+.hero .wrap,
+.hero-layout{
+  width:100vw !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 56px !important;
+  min-height:calc(100vh - 72px);
+}
+
+.hero-content{
+  padding-top:56px !important;
+  max-width:620px;
+}
+
+.hero-image{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.hero-image img{
+  width:100vw !important;
+  max-width:none !important;
+  min-width:1600px;
+  height:auto;
+  margin:0 !important;
+  display:block;
+  background:transparent;
+  box-shadow:none !important;
+  filter:none !important;
+  animation:none !important;
+}
+
+/* El texto siempre encima de la imagen */
+.hero-content,
+.hero-stats{
+  position:relative;
+  z-index:5;
+}
