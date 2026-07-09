@@ -1176,18 +1176,18 @@ box-shadow:none !important;
 =================================== */
 
 .card .card-icon{
-  width:42px !important;
-  height:42px !important;
-  max-width:42px !important;
-  max-height:42px !important;
+  width:30px !important;
+  height:30px !important;
+  max-width:30px !important;
+  max-height:30px !important;
   margin-bottom:16px !important;
 }
 
 .card .card-icon img{
-  width:42px !important;
-  height:42px !important;
-  max-width:42px !important;
-  max-height:42px !important;
+  width:30px !important;
+  height:30px !important;
+  max-width:30px !important;
+  max-height:30px !important;
   display:block !important;
   object-fit:contain !important;
 }
