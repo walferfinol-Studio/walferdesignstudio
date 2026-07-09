@@ -872,31 +872,40 @@ textarea{
 }
 /* ==========================================================
    HERO HOME TIPO LANDING PREMIUM
+   Responsive automático para texto e imagen
 ========================================================== */
 
 .hero{
   position:relative;
-  min-height:860px;
-  padding:70px 0 40px;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  min-height:calc(100vh - 72px);
   overflow:hidden;
 }
 
+.hero .wrap,
 .hero-layout{
   position:relative;
-  min-height:760px;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0 clamp(24px, 4vw, 56px);
+  min-height:calc(100vh - 72px);
 }
 
 .hero-content{
   position:relative;
   z-index:5;
-  max-width:620px;
-  padding-top:28px;
+  width:min(100%, 620px);
+  padding-top:clamp(36px, 4vw, 56px);
 }
 
 .hero h1{
   max-width:620px;
   margin:28px 0 24px;
-  font-size:clamp(52px, 6vw, 82px);
+  font-size:clamp(42px, 5vw, 82px);
   line-height:.95;
   letter-spacing:-.075em;
 }
@@ -904,7 +913,8 @@ textarea{
 .hero .lead{
   max-width:600px;
   margin-bottom:30px;
-  font-size:clamp(18px, 1.7vw, 22px);
+  font-size:clamp(16px, 1.3vw, 22px);
+  line-height:1.5;
   color:#CED4E2;
 }
 
@@ -915,47 +925,35 @@ textarea{
   margin-bottom:44px;
 }
 
-/* ==========================================================
-   IMAGEN DEL HERO
-========================================================== */
-
-/* ==========================================================
-   IMAGEN DEL HERO - FULL WIDTH
-========================================================== */
-
+/* Imagen desktop como fondo visual */
 .hero-image{
-    position:absolute;
-    inset:0;
-    z-index:1;
-
-    display:flex;
-    justify-content:flex-end;
-    align-items:flex-start;
-
-    overflow:hidden;
-    pointer-events:none;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+  overflow:hidden;
+  pointer-events:none;
 }
 
 .hero-image img{
-
-    width:clamp(1500px, 92vw, 3000px);
-    max-width:none;
-    min-width:1500px;
-    height:auto;
-
-    margin-top:-20px;
-    margin-right:-320px;
-
-    display:block;
-
-    background:transparent;
-    box-shadow:none !important;
-    filter:none !important;
-    animation:none !important;
-
+  width:clamp(900px, 78vw, 1700px);
+  max-width:none;
+  height:auto;
+  margin-top:clamp(-24px, -1.5vw, 0px);
+  margin-right:clamp(-360px, -14vw, -80px);
+  display:block;
+  background:transparent;
+  box-shadow:none !important;
+  filter:none !important;
+  animation:none !important;
 }
 
+/* Herramientas */
 .hero-tools{
+  position:relative;
+  z-index:6;
   margin-top:18px;
   color:var(--muted);
 }
@@ -978,6 +976,7 @@ textarea{
   color:#fff;
 }
 
+/* Stats */
 .hero-stats{
   position:relative;
   z-index:6;
@@ -1016,223 +1015,31 @@ textarea{
   color:var(--muted);
 }
 
-/* Oculta stats antiguas si quedaron en el HTML anterior */
+/* Oculta stats antiguas si quedaron */
 .hero .stats{
   display:none;
 }
 
-/* ==========================
-   TABLET
-========================== */
-
-@media(max-width:980px){
-
-  .hero{
-    min-height:auto;
-    padding:48px 0 36px;
-  }
-
-  .hero-layout{
-    min-height:auto;
-  }
-
-  .hero-content{
-    max-width:100%;
-    padding-top:0;
-  }
-
-  .hero h1,
-  .hero .lead{
-    max-width:100%;
-  }
-
-  .hero-image{
-    position:relative;
-    top:auto;
-    right:auto;
-    width:100%;
-    max-width:760px;
-    margin:36px auto 0;
-  }
-
-  .hero-stats{
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-  }
-
-  .hero-stat{
-    border-right:none;
-    padding:0;
-  }
-
-}
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:640px){
-
-  .hero{
-    padding:28px 0 32px !important;
-  }
-
-  .hero h1{
-    font-size:44px;
-  }
-
-  .hero .lead{
-    font-size:16px;
-  }
-
-  .hero-image{
-    width:115%;
-    margin-left:-7.5%;
-  }
-
-  .hero-stats{
-    grid-template-columns:1fr;
-  }
-
-}
-
-/* ==========================================================
-   FIX HERO FULL WIDTH SIN MÁRGENES
-   Pegado al topbar y de punta a punta
-========================================================== */
-
-.hero{
-  width:100vw !important;
-  max-width:none !important;
-  margin:0 !important;
-  padding:0 !important;
-  min-height:calc(100vh - 72px);
-  overflow:hidden;
-}
-
-.hero .wrap,
-.hero-layout{
-  width:100vw !important;
-  max-width:none !important;
-  margin:0 !important;
-  padding:0 56px !important;
-  min-height:calc(100vh - 72px);
-}
-
-.hero-content{
-  padding-top:56px !important;
-  max-width:620px;
-}
-
-.hero-image{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-start;
-  pointer-events:none;
-  overflow:hidden;
-}
-
-.hero-image img{
-  width:100vw !important;
-  max-width:none !important;
-  min-width:1600px;
-  height:auto;
-  margin:0 !important;
-  display:block;
-  background:transparent;
-  box-shadow:none !important;
-  filter:none !important;
-  animation:none !important;
-}
-
-/* El texto siempre encima de la imagen */
-.hero-content,
-.hero-stats{
-  position:relative;
-  z-index:5;
-}
-/* ==========================================================
-   FIX RESPONSIVE HERO DESKTOP / NOTEBOOK / MOBILE
-========================================================== */
-
-/* Desktop normal */
-.hero{
-  width:100%;
-  max-width:none;
-  margin:0;
-  padding:0;
-  min-height:calc(100vh - 72px);
-  overflow:hidden;
-}
-
-.hero .wrap,
-.hero-layout{
-  width:100%;
-  max-width:none;
-  margin:0;
-  padding:0 56px;
-  min-height:calc(100vh - 72px);
-}
-
-.hero-content{
-  position:relative;
-  z-index:5;
-  max-width:620px;
-  padding-top:56px;
-}
-
-.hero h1{
-  font-size:clamp(56px, 5.5vw, 82px);
-  max-width:620px;
-}
-
-.hero-image{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-start;
-  overflow:hidden;
-  pointer-events:none;
-}
-
-.hero-image img{
-  width:clamp(1300px, 92vw, 3000px);
-  max-width:none;
-  height:auto;
-  margin-top:0;
-  margin-right:-180px;
-}
-
-/* Notebook / navegador achicado */
+/* Notebook */
 @media(max-width:1280px){
 
-  .hero .wrap,
-  .hero-layout{
-    padding:0 40px;
-  }
-
   .hero-content{
-    max-width:560px;
+    width:min(100%, 560px);
   }
 
   .hero h1{
-    font-size:clamp(48px, 5.2vw, 68px);
     max-width:560px;
+    font-size:clamp(40px, 4.6vw, 68px);
   }
 
   .hero .lead{
     max-width:540px;
-    font-size:18px;
+    font-size:clamp(15px, 1.35vw, 18px);
   }
 
   .hero-image img{
-    width:1350px;
-    margin-right:-360px;
+    width:clamp(820px, 72vw, 1250px);
+    margin-right:clamp(-300px, -18vw, -120px);
   }
 
   .hero-stats{
@@ -1250,20 +1057,17 @@ textarea{
 
   .hero .wrap,
   .hero-layout{
-    padding:0 28px;
     min-height:auto;
+    padding:0 28px;
   }
 
   .hero-content{
+    width:100%;
     max-width:100%;
     padding-top:0;
   }
 
-  .hero h1{
-    font-size:clamp(42px, 9vw, 58px);
-    max-width:100%;
-  }
-
+  .hero h1,
   .hero .lead{
     max-width:100%;
   }
@@ -1276,18 +1080,24 @@ textarea{
   }
 
   .hero-image img{
-    width:110%;
-    max-width:none;
-    margin:0 0 0 -5%;
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
   }
 
   .hero-stats{
     grid-template-columns:repeat(2,1fr);
     max-width:100%;
+    gap:18px;
+  }
+
+  .hero-stat{
+    border-right:none;
+    padding:0;
   }
 }
 
-/* Mobile: se oculta esta imagen desktop */
+/* Mobile: aquí ocultamos esta imagen desktop */
 @media(max-width:640px){
 
   .hero{
