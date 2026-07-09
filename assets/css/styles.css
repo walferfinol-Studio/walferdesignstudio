@@ -970,15 +970,32 @@ textarea{
 }
 
 .tool-list{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  flex-wrap:wrap;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:22px;
 }
 
-.tool-list strong{
-  font-size:14px;
-  color:#fff;
+.tool-list span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    font-size:14px;
+    font-weight:600;
+    color:#fff;
+
+    line-height:1;
+}
+
+.tool-list img{
+    width:18px;
+    height:18px;
+
+    display:block;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
 /* Stats */
