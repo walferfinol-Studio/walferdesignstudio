@@ -870,3 +870,78 @@ textarea{
     margin-bottom:18px !important;
   }
 }
+/* ==========================================================
+   HERO CON IMAGEN
+   Imagen principal del Home
+========================================================== */
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:720px;
+    height:auto;
+    display:block;
+
+    filter:drop-shadow(0 30px 80px rgba(0,0,0,.35));
+
+    animation:heroFloat 7s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:980px){
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+    gap:40px;
+
+}
+
+.hero-image{
+
+    order:-1;
+
+}
+
+.hero-image img{
+
+    max-width:550px;
+
+}
+
+}
