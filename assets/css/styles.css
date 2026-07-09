@@ -919,32 +919,39 @@ textarea{
    IMAGEN DEL HERO
 ========================================================== */
 
+/* ==========================================================
+   IMAGEN DEL HERO - FULL WIDTH
+========================================================== */
+
 .hero-image{
-  position:absolute;
-  inset:0;
-  z-index:1;
+    position:absolute;
+    inset:0;
+    z-index:1;
 
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-start;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-start;
 
-  pointer-events:none;
+    overflow:hidden;
+    pointer-events:none;
 }
 
 .hero-image img{
 
-  width:min(95vw,1500px);
-  height:auto;
+    width:clamp(1500px, 92vw, 3000px);
+    max-width:none;
+    min-width:1500px;
+    height:auto;
 
-  margin-top:10px;      /* Ajusta la altura */
-  margin-right:-140px;  /* Hace que salga por la derecha */
+    margin-top:-20px;
+    margin-right:-320px;
 
-  display:block;
+    display:block;
 
-  background:transparent;
-  box-shadow:none !important;
-  filter:none !important;
-  animation:none !important;
+    background:transparent;
+    box-shadow:none !important;
+    filter:none !important;
+    animation:none !important;
 
 }
 
